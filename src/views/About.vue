@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <main>
-      <b-row align-h="around">
+      <b-row class="ml-1" align-h="around">
         <b-col cols="4">
           <b-button variant="success" @click="this.criticalCard">Critical</b-button>
         </b-col>
@@ -52,24 +52,21 @@ export default {
 
   methods: {
     criticalCard() {
+      //  THIS FUNCTION DISPLAYS THE CARD, THEN SETS currentCard TO MATCH WHAT'S IN THE STATE.
       this.showCard = true;
       this.currentCardTitle = "CRITICAL!";
       this.currentCard = this.$store.state.criticalCards[
         Math.floor(Math.random() * this.$store.state.criticalCards.length)
       ];
-
-      console.log(this.currentCard);
-      // USE THIS FUNCTION TO SET this.currentCard TO A RANDOM CARD FROM THE STATE
     },
 
     fumbleCard() {
+      //  THIS FUNCTION DISPLAYS THE CARD, THEN SETS currentCard TO MATCH WHAT'S IN THE STATE.
       this.showCard = true;
       this.currentCardTitle = "FUMBLE!";
       this.currentCard = this.$store.state.fumbleCards[
         Math.floor(Math.random() * this.$store.state.fumbleCards.length)
       ];
-
-      // USE THIS FUNCTION TO SET this.currentCard TO A RANDOM CARD FROM THE STATE
     }
   },
 

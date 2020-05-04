@@ -3,6 +3,9 @@ import Vuex from "vuex";
 
 Vue.use(Vuex);
 
+// OVERWRITE criticalCards WITH THE JSON YOU HAVE.
+// UPDATE IN About.vue TO MATCH UP.
+
 export default new Vuex.Store({
   state: {
     weather: {},
